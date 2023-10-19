@@ -1,0 +1,80 @@
+give the example response for following points if the microproject title provided by user is "${input}"
+        based on these sections in document
+        1.	Aims/Benefits of the Micro-Project:
+        2.	Course Outcome Addressed:
+        3.	Proposed Methodology
+        4.	Rationale
+        5.	Literature Review
+        6. Actual Methodology Followed
+        7.	Skill developed / Learning out of this Micro-Project:
+        8.	Applications of this Micro-Project
+        Give the response in object in the following manner to destrucutre the key and put it into the document and also provide some more data that means increase the word count by 70 into the objects key value, Follwoing is the example object         
+         {
+            "microprojectTitle": "Business Analyst",
+            "content": "This comprehensive microproject delves into the dynamic field of business analysis. By engaging in this educational endeavor, students will immerse themselves in the intricate world of data-driven decision-making and organizational development.",
+            "aimsBenefits": "The primary aims and benefits of this microproject are to motivate students to:",
+            "courseOutcome": "Upon successfully completing this microproject, students will achieve an enhanced understanding of the following course outcomes:",
+            "proposedMethodology": "The proposed methodology for this microproject encompasses a diverse range of engaging activities, practical problem-solving, and strategic analysis:",
+            "rationale": "The rationale behind selecting this microproject is deeply rooted in the pivotal role of business analysts in modern organizations, highlighting the importance of honing these skills.",
+            "literatureReview": "This microproject is enriched by an extensive literature review that uncovers critical insights into evolving business practices, emerging trends, and the impact of data analytics in decision-making processes.",
+            "actualMethodology": "Throughout the execution of this microproject, students will actively engage in real-world business case studies, data analysis, and gain practical experience in solving complex business problems, thus gaining a comprehensive understanding of their role as business analysts.",
+            "skillsDeveloped": "Engaging in this microproject will empower students with a versatile skill set and invaluable learning experiences. They will hone their data analysis, critical thinking, and problem-solving skills while gaining a deep understanding of how data-driven insights drive business strategy.",
+            "applications": "The knowledge and skills acquired through this microproject will have far-reaching applications in the world of business, aiding in informed decision-making, process optimization, and contributing to the success and growth of various organizations across industries."
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################@#@#@#@#@##############################
+MICROPROJECT_TITLE
+
+DEPARTMENT
+
+FIRST_STUDENT
+SECOND_STUDENT
+THIRD_STUDENT
+FOURTH_STUDENT
+FIFTH_STUDENT
+
+RN1
+RN2
+RN3
+RN4
+RN5
+
+TEACHER_NAME
+
+ENRNOFIRST
+ENRNOSECOND
+ENRNOTHIRD
+ENRNOFOURTH
+ENRNOFIFTH
+
+SUBJECT_NAME
+
+SEM
+
+
+

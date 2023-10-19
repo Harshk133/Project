@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/api">
+    <label for="prompt">Enter your prompt:</label>
+    <input type="text" name="prompt" id="prompt" required>
+    <button type="submit">Submit</button>
+</form>
+
+<div class="container">
+    <div class="output"></div>
+</div>
+
+<script>
+    const fetchMugAIResponse = async ()=> {
+        try{
+            let response = await fetch("/api");
+            let data = await response.json();
+            console.log(data);
+            document.querySelector(".output").innerHTML = document.querySelector(".output").innerHTML = + `
+                <p>${data.message}</p>
+            `;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    fetchMugAIResponse();
+</script>
+
+</body>
