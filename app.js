@@ -24,7 +24,7 @@ app.set("view engine", "hbs");
 const messages = [];
 const outputanswer = [];
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
 });
 
 async function main(input) {
@@ -44,7 +44,9 @@ async function main(input) {
         Give the response in object in the following manner to destrucutre the key and put it into the document, Follwoing is the example object          
         {
             "microprojectTitle": "Computer Science",
+
             "content": "This microproject explores the diverse and ever-evolving field of computer science. Students will delve into the world of algorithms, programming, and cutting-edge technologies, gaining a strong foundation in this critical discipline. It serves as a gateway to the digital age and its dynamic possibilities.",
+
             "aimsBenefits": "The primary aims and benefits of this microproject are to:",
             "aims": [
                 "Cultivate a deep understanding of computer science fundamentals.",
@@ -53,7 +55,9 @@ async function main(input) {
                 "Explore emerging technologies and their real-world applications.",
                 "Foster an appreciation for the importance of computer science in modern society."
             ],
+
             "courseOutcome": "Upon successful completion of this microproject, students will achieve an enhanced understanding of the following course outcomes:",
+
             "courseOutcomes": [
                 "Master core programming concepts and algorithms.",
                 "Demonstrate proficiency in software development and coding practices.",
@@ -62,6 +66,7 @@ async function main(input) {
                 "Participate in collaborative projects and teamwork.",
                 "Engage in continuous learning and adaptability in the field."
             ],
+
             "proposedMethodology": "The proposed methodology for this microproject includes a mix of theoretical learning and practical application:",
             "methodologyDetails": [
                 "Lectures and in-depth discussions on computer science concepts and theories.",
@@ -70,13 +75,21 @@ async function main(input) {
                 "Guest lectures by industry experts to provide insights into current trends.",
                 "Regular assessments and feedback to track progress and learning."
             ],
+
             "rationale": "The rationale behind selecting this microproject lies in the fundamental importance of computer science in today's digital age. It is vital for students to develop a solid grasp of the core concepts in this field.",
+
             "rationaleDetails": "In an increasingly technology-driven world, computer science is the backbone of innovation and progress. It underpins fields ranging from artificial intelligence to cybersecurity, and a strong foundation in computer science is essential for students to excel in a variety of careers. This microproject aims to equip students with the knowledge and skills needed to thrive in a technology-dependent society.",
+
             "literatureReview": "This microproject is supported by an extensive literature review that covers the history of computer science, emerging technologies, and the impact of computer science in various industries.",
+
             "literatureReviewDetails": "The literature review delves into the evolution of computer science, from its historical roots to contemporary advancements. It also explores the transformative role of computer science in sectors such as healthcare, finance, and entertainment. By studying the literature, students gain insights into the profound impact of technology on society and the countless opportunities it offers for innovation.",
+
             "actualMethodology": "Throughout the execution of this microproject, students will participate in coding exercises, projects, and hands-on activities, enabling them to apply their knowledge in real-world scenarios.",
+
             "actualMethodologyDetails": "Students will engage in a variety of activities, including coding challenges to reinforce programming skills, collaborative projects to simulate real-world scenarios, and hands-on experiments with emerging technologies. This practical approach ensures that students not only understand computer science concepts but can also apply them effectively, preparing them for the challenges of a technology-driven job market.",
+
             "skillsDeveloped": "Engaging in this microproject will empower students with essential computer science skills, including programming, problem-solving, algorithm design, and critical thinking. They will also gain experience in software development and technology trends.",
+
             "skillsDevelopedDetails": "Participating in this microproject hones a wide range of skills, including:",
             "skillsList": [
                 "Proficiency in multiple programming languages.",
@@ -87,7 +100,6 @@ async function main(input) {
                 "Collaborative teamwork and communication skills."
             ]
         } 
-        Give Response 2X of above object!
     `
     });
     // messages.push({
@@ -217,11 +229,11 @@ app.post("/microproject", async (req, res) => {
         const dataToAdd_microproject = {
             STUDENT_NAME: req.body.username,
             STUDENT_ENR: req.body.userenrollmentnumber,
-            MICROPROJECT_TITLE: microprojectTitle,
+            MICROPROJECT_TITLE: req.body.microprojectitle,
             TEACHER_NAME: req.body.teachername,
             ROLLNO: req.body.rollnumber,
             AIMSBENEFITS: result.aimsBenefits,
-            COURSEOUTCOME: result.courseOutcome,
+            COURSEOUTCOME: result.courseOutcome ,
             PROPOSEDMETHODOLOGY: result.proposedMethodology,
             RATIONALE: result.rationale,
             LITERATUREREVIEW: result.literatureReview,
